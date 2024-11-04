@@ -45,6 +45,10 @@ int classifyToken(const char *str)
     {
         printf("%s is a identifier.\n", str);
     }
+    else
+    {
+        printf("Undefined.\n");
+    }
 }
 
 int isKeyword(const char *str)
@@ -113,7 +117,7 @@ int isIdentifier(const char *str)
 int isOperator(const char *str)
 {
     const char *operators[] = {"()", "[]", "+", "-", "++", "--", "!", "~", "*", "&", "sizeof", "*", "/", "%", "<<",
-                              ">>", "<", "<=", ">", ">=", "==", "!=", "&", "^", "|", "&&", "||", ",","="};
+                               ">>", "<", "<=", ">", ">=", "==", "!=", "&", "^", "|", "&&", "||", ",", "="};
 
     int numOperator = sizeof(operators) / sizeof(operators[0]);
     for (int i = 0; i < numOperator; i++)
@@ -124,5 +128,4 @@ int isOperator(const char *str)
         }
     }
     return 0;
-
 }
